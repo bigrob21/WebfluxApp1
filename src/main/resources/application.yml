@@ -1,0 +1,19 @@
+server:
+  port: 4444
+
+spring:
+  application:
+    name: ReactiveWebApp-1
+management:
+  health:
+    livenessstate:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - metrics
+          - mappings
+          - beans
